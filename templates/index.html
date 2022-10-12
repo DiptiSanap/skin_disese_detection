@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>skin disease</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+<style>
+
+
+body {
+    background-color: lightpink;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+  }
+  @keyframes example {
+    from {background-color:#FFFFFF;}
+    to {background-color:#D3D3D3;}
+
+  }
+ 
+  p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+  }
+
+  li{
+    font-family: "Times New Roman";
+    font-size: 20px;
+  }
+
+  h1{
+    padding: 40px;
+    height: 120px;
+    text-align: centre;
+    background: #20b096;
+    color: white;
+    font-size: 50px;
+
+  }
+
+  h4{
+    height: 70px;
+    padding-top: 20px;
+    padding-right: 0.001px;
+    padding-bottom: 20px;
+    padding-left: 0.001px;
+    text-align: centre;
+    background: #18a775;
+    color: white;
+    font-size: 35px;
+
+  }
+
+
+  h2{
+    padding: 20px;
+   
+    height: 80px;
+    background: #20b096;
+    color: rgb(22, 24, 24);
+    font-size: 40px;
+
+  }
+  h5{
+  
+  
+  font-size: 50px;
+ 
+
+}
+  
+  </style>
+
+    
+
+</head>
+<body>
+<div class="w3-container w3-center w3-animate-top"> 
+<p><h1 align="center">Welcome to e-health portal</h1></p>
+</div>
+
+
+
+ <div class="w3-container">
+  <p align="center"><i class="fa fa-spinner w3-spin" style="font-size:64px" ></i></p>
+  </div>
+
+
+
+<div class="container">
+<div class="row">
+    <h2  align="center">Skin Disease Detection</h2>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+        <div>
+            <img src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+    {% endif %}
+    <form method="post" action="/" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="file" class="form-control" autocomplete="off" required>
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit" class="btn btn-info">
+        </p>
+    </form>
+{% if prediction %}
+<div class="w3-container">
+<p><h4 align="center" class="w3-center w3-animate-right">Detected disease:{{prediction}}</h4>
+</p>
+<h5 align="center"><a href="{{ url_for('first') }}" class="btn btn-info btn-lg">Click here for more information about {{prediction}}</a></h5>
+</div>
+{% endif %}   
+
+
+
+</div>
+</div>
+
+
+</body>
+</html>
