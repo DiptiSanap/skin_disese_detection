@@ -2,7 +2,8 @@
 
 **Aim & Objective of project:
 
-	Dermatological disorders are one of the most widespread diseases in the world. Despite being common its diagnosis is extremely difficult because of its complexities of skin tone, colour, presence of hair.
+Dermatological disorders are one of the most widespread diseases in the world.
+Despite being common its diagnosis is extremely difficult because of its complexities of skin tone, colour, presence of hair.
 Our objective behind this project was,  to use various deep learning based techniques (Convolutional Neural networks) to automatically predict the various kinds of skin diseases. 
 The aim was to develop an application that will help both dermatologist and users to easily predict the skin lesion by just uploading an image of infected area. 
 
@@ -20,7 +21,8 @@ Among the whole dataset we choose 3 classes with maximum number of samples for o
 
 **Preprocessing Steps:
 
-![image](https://user-images.githubusercontent.com/107847530/204492137-9379ff40-e90d-49fb-a821-169c188cf93d.png)
+![image](https://user-images.githubusercontent.com/107847530/204496367-ea7ac6cd-3aef-40fd-9a6b-a3f7879035cb.png)
+
 
 As we observed in the above graph, it is clear that the dataset is imbalanced. It is more biased towards the class Melanocytic nevi(nv). For balancing the dataset,we decided to do sampling for balance the dataset.
 We take 1500 samples of each class and divided them into (1250+250) for the train set and test set respectively. Total size of train set is 3750 and that of test set is 750 resp.
