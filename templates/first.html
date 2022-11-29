@@ -1,0 +1,189 @@
+<html>
+    <head>
+    <title>Disease information</title>
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+
+
+      body {
+          background-color: lightpink;
+          animation-name: example;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          
+        }
+        @keyframes example {
+          from {background-color:#FFFFFF;}
+          to {background-color:#D3D3D3;}
+      
+        }
+       
+        p {
+          font-family: "Times New Roman";
+          font-size: 20px;
+        }
+      
+        li{
+          font-family: "Times New Roman";
+          font-size: 20px;
+        }
+      
+        h1{
+          padding: 40px;
+          height: 120px;
+          text-align: centre;
+          background: #279997;
+          color: white;
+          font-size: 50px;
+      
+        }
+      
+        h4{
+          height: 70px;
+          padding-top: 20px;
+          padding-right: 0.001px;
+          padding-bottom: 20px;
+          padding-left: 0.001px;
+          text-align: centre;
+          background: #383838;
+          color: white;
+          font-size: 35px;
+      
+        }
+      
+      
+        h2{
+          padding: 20px;
+         
+          height: 80px;
+          background: #000000;
+          color: white;
+          font-size: 40px;
+      
+        }
+        h5{
+        
+        
+        font-size: 50px;
+       
+      
+      }
+        
+        </style>
+      
+          
+    
+    
+    
+
+
+    <body>
+
+      
+    <h1 align="center">{{prediction}}</h1>
+    {% if prediction1 %}
+    <article>
+        <h3><b>Information</b></h3>
+        <p>{{prediction1}} </p>
+           <p> <h3><b>Symptoms </b></h3></p>
+            <ul>
+                <li>scaly, greasy patches on scalps</li>
+              <li>redness</li>
+              <li>swelling</li>
+              <li>Greasy scaling around the nose and in and around the eyebrows, on the mid-chest, upper back, and in the armpits and groin area.</li>
+            </ul>
+            <h3><b>Causes</h3></b>
+            <ul>
+              <li>stress</li>
+            <li>hormonal changes or illness</li>
+            <li>harsh detergents, solvents, chemicals and soaps</li>
+            <li>cold, dry weather</li>
+            <li>some medications, including psoralen, interferon and lithium</li>
+            </ul>
+            <h3><b>Treatment: Treatment depends on the severity</b></h3>
+            <p>Treatment involves self-care and medicated shampoos, creams and lotions. Repeated treatments may be necessary.
+            Following a skincare routine can help keep symptoms under control. Wash affected areas daily with a gentle, zinc-containing cleanser (2% zinc pyrithione) and follow up with a moisturizer. Healthy lifestyle habits, like managing stress and getting plenty of sleep, can also improve skin.</p>
+            
+       
+      </article>
+    {% endif %}
+    
+    
+    {% if prediction2 %}
+    
+    <article>
+    
+    <h3><b>Information</b></h3>
+    <p>{{prediction2}} </p>
+            
+    <h3><b>Symptoms</b></h3>
+    <ul>
+    <li>A change in an existing mole</li>
+    <li>The development of a new pigmented or unusual-looking growth on your skin</li>
+    </ul>
+    <h3><b>Causes</b></h3>
+    <ul>
+    <li>Excessive ultraviolet (UV) light exposure.</li>
+    <li>Living closer to the equator or at a higher elevation</li>
+    <li>Having many moles or unusual moles</li>
+    <li>A family history of melanoma.</li>
+    <li>Weakened immune system.</li>
+    </ul>
+    
+    <h3><b>Prevention</b></h3>
+    <ul>
+    <li>Avoid the sun during the middle of the day</li>
+    <li>Wear sunscreen year-round</li>
+    <li>Wear protective clothing.</li>
+    <li>Become familiar with your skin so that you'll notice changes.</li>
+    </ul>
+    <h3><b>Treatment</b></h3>
+    <ul>
+    <li>Treatment depends on the stage</li>
+    <li>Treatment may involve surgery, radiation, medication, or in some cases, chemotherapy.</li>
+    </ul>
+    </article2>
+    {% endif %}
+    
+    {% if prediction3 %}
+    <article>
+        <h3><b>Information</b></h3>
+        <p>{{prediction3}} </p>
+            <h3><b>Symptoms </b></h3>
+        <ul>
+            <li>They may arise on any part of the body.</li>
+            <li>They differ in appearance depending on the body site.</li>
+            <li>They may be flat or protruding.</li>
+            <li>They vary in color from pink or flesh tones to dark brown, steel blue, or black.</li>
+            <li>Light-skinned individuals tend to have light-coloured naevi and dark-skinned individuals tend to have dark brown or black naevi.</li>
+            <li>Although mostly round or oval in shape, moles are sometimes unusual shapes.</li>
+            <li>They range in size from a couple of millimetres to several centimetres in diameter.</li>
+        </ul>
+    <h3><b>Causes</b></h3>
+    <ul>
+    <li>People with many melanocytic naevi tend to have family members that also have many similar lesions.</li>
+    <li>Somatic mutations in RAS genes are associated with congenital melanocytic naevi</li>
+    <li>New melanocytic naevi may erupt following the use of BRAF inhibitor drugs (vemurafenib, dabrafenib).</li>
+    <li>People living in Australia and New Zealand have many more naevi than their relatives residing in Northern Europe.</li>
+    <li>Immunosuppressive treatment leads to an increase in the numbers of naevi.</li>
+    </ul>
+    
+    <h3><b>Treatments</b></h3>
+    <ul>
+    <li>Most cases don't require treatment, but some cases require removal of the mole.</li>
+    </ul>
+    </article>
+    
+    {% endif %}
+<h5 align="center"><a href="index.html" class="btn btn-info btn-lg">back</a></h5>
+
+    </body>
+</html>
